@@ -34,7 +34,7 @@
     #xianchi-product-prototype .xc-auth-decor { position:absolute; right:23px; top:32px; font-size:66px; transform:rotate(8deg); filter:drop-shadow(0 10px 12px rgba(70,111,79,.16)); }
     #xianchi-product-prototype .xc-auth-brand { display:flex; align-items:center; gap:11px; margin-bottom:28px; }
     #xianchi-product-prototype .xc-auth-brand-mark { width:49px; height:49px; display:grid; place-items:center; border-radius:18px; background:#d8f1df; box-shadow:0 5px 0 #afd8ba; font-size:27px; }
-    #xianchi-product-prototype .xc-auth-brand strong { display:block; font-size:20px; letter-spacing:.1em; }
+    #xianchi-product-prototype .xc-auth-brand strong { display:block; font-size:20px; letter-spacing:-.02em; }
     #xianchi-product-prototype .xc-auth-brand small { color:#779184; font-size:9px; letter-spacing:.18em; }
     #xianchi-product-prototype .xc-auth-copy { margin-bottom:20px; }
     #xianchi-product-prototype .xc-auth-copy h1 { max-width:270px; font-size:30px; }
@@ -68,7 +68,7 @@
     #xianchi-product-prototype .xc-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:17px; }
     #xianchi-product-prototype .xc-brand { display:flex; align-items:center; gap:9px; }
     #xianchi-product-prototype .xc-mascot { width:39px; height:39px; display:grid; place-items:center; border-radius:14px 14px 18px 18px; background:#d8f1df; font-size:22px; transform:rotate(-3deg); box-shadow:0 4px 0 #a8d8b6; }
-    #xianchi-product-prototype .xc-brand strong { display:block; font-size:17px; letter-spacing:.08em; }
+    #xianchi-product-prototype .xc-brand strong { display:block; font-size:17px; letter-spacing:-.02em; }
     #xianchi-product-prototype .xc-brand small { color:light-dark(#7a9487,#9ab2a5); font-size:9px; letter-spacing:.18em; }
     #xianchi-product-prototype .xc-icon-button { width:39px; height:39px; border:1px solid light-dark(#dce9e1,#355046); border-radius:14px; color:inherit; background:light-dark(#fff,#1b2d24); font-size:17px; }
     #xianchi-product-prototype .xc-kicker { margin:0 0 5px; color:light-dark(#6f8b7d,#a5bbae); font-size:11px; font-weight:700; }
@@ -339,10 +339,10 @@
     }
   </style>
 
-  <div class="xc-phone" aria-label="先吃家庭食品管家完整交互原型">
-    <section class="xc-auth-shell" id="xc-auth-shell" aria-label="登录先吃">
+  <div class="xc-phone" aria-label="What to Eat 家庭食品管家完整交互原型">
+    <section class="xc-auth-shell" id="xc-auth-shell" aria-label="登录 What to Eat">
       <div class="xc-auth-decor" aria-hidden="true">🍳</div>
-      <div class="xc-auth-brand"><div class="xc-auth-brand-mark">🌱</div><div><strong>先吃</strong><small>XIANCHI</small></div></div>
+      <div class="xc-auth-brand"><div class="xc-auth-brand-mark">🌱</div><div><strong>What to Eat</strong><small>FRESH FOOD STEWARD</small></div></div>
       <div class="xc-auth-copy"><h1>欢迎回来，<br>今晚也好好吃饭</h1><p>登录后同步你的冰箱、菜谱收藏和做饭记录。</p></div>
       <div class="xc-auth-card">
         <div class="xc-auth-tabs" role="tablist" aria-label="登录或注册"><button type="button" id="xc-auth-login-tab" role="tab" aria-selected="true">登录</button><button type="button" id="xc-auth-register-tab" role="tab" aria-selected="false">注册</button></div>
@@ -365,7 +365,7 @@
     <div class="xc-status"><span>9:41</span><span>▮▮▮ ◉ ▰</span></div>
     <div class="xc-app">
       <section class="xc-screen xc-active" data-screen="home">
-        <div class="xc-head"><div class="xc-brand"><div class="xc-mascot">🌱</div><div><strong>先吃</strong><small>XIANCHI</small></div></div><button class="xc-icon-button" data-go="profile" aria-label="个人中心">☺</button></div>
+        <div class="xc-head"><div class="xc-brand"><div class="xc-mascot">🌱</div><div><strong>What to Eat</strong><small>FRESH FOOD STEWARD</small></div></div><button class="xc-icon-button" data-go="profile" aria-label="个人中心">☺</button></div>
         <p class="xc-kicker">8月31日 · 今天也别浪费呀</p>
         <h1>冰箱里有好吃的，<br>我们把它变成晚餐吧</h1>
         <div class="xc-hero"><span class="xc-sticker">⚡ 抢救食材</span><h1>番茄和口蘑<br>今天优先吃</h1><p>刚好可以做一份酸甜浓郁的番茄蘑菇意面。</p><button class="xc-primary" id="xc-home-cook">看看怎么做</button><div class="xc-hero-food" id="xc-home-hero-photo" role="img" aria-label="番茄蘑菇意面高清实拍图"></div></div>
@@ -1818,8 +1818,8 @@
         const denied = cameraPermissionState === 'denied';
         const unavailable = cameraPermissionState === 'unavailable';
         openSheet({
-          title: unavailable ? '无法使用实时相机' : denied ? '重新开启相机权限' : '允许先吃使用相机？',
-          copy: unavailable ? '当前设备或浏览器不支持实时相机，你仍然可以从相册选择真实照片。' : denied ? '请先在浏览器地址栏的网站设置中，把“相机”改为允许，然后点击再次尝试。' : '相机仅会在你主动拍摄作品时开启。照片保存在作品中，先吃不会在后台访问摄像头。',
+          title: unavailable ? '无法使用实时相机' : denied ? '重新开启相机权限' : '允许 What to Eat 使用相机？',
+          copy: unavailable ? '当前设备或浏览器不支持实时相机，你仍然可以从相册选择真实照片。' : denied ? '请先在浏览器地址栏的网站设置中，把“相机”改为允许，然后点击再次尝试。' : '相机仅会在你主动拍摄作品时开启。照片保存在作品中，What to Eat 不会在后台访问摄像头。',
           action: unavailable ? '我知道了' : denied ? '再次尝试' : '允许使用相机',
           onAction: unavailable ? () => {} : requestCamera
         });
