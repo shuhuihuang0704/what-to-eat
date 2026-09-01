@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/readme-hero.svg" width="100%" alt="先吃 What to Eat — 把冰箱里的食材变成今晚的好味道">
+  <img src="assets/readme-hero.svg" width="100%" alt="What to Eat — 把冰箱里的食材变成今晚的好味道">
 
   <br>
 
@@ -13,9 +13,9 @@
   <img alt="Language" src="https://img.shields.io/badge/语言-简体中文-F0C979?style=flat-square">
 </div>
 
-## 🌱 关于「先吃」
+## 🌱 关于 What to Eat
 
-打开冰箱却不知道吃什么？「先吃」把食材管理、菜谱灵感、分步跟做和做饭记录放进一个清新可爱的手机网页里。
+打开冰箱却不知道吃什么？What to Eat 把食材管理、菜谱灵感、分步跟做和做饭记录放进一个清新可爱的手机网页里。
 
 它会提醒你哪些食材快到期，按现有食材推荐今晚能做的菜，并把复杂菜谱拆成容易执行的小步骤——让每一份食材都被好好吃掉。
 
@@ -108,5 +108,5 @@ what-to-eat/
 ---
 
 <div align="center">
-  <strong>🌿 先吃冰箱里的，再决定买什么。</strong>
+  <strong>🌿 优先吃冰箱里的，再决定买什么。</strong>
 </div>
