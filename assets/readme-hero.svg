@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-labelledby="title desc">
-  <title id="title">先吃 What to Eat</title>
+  <title id="title">What to Eat</title>
   <desc id="desc">把冰箱里的食材变成今晚的好味道</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
@@ -21,8 +21,8 @@
   <g transform="translate(102 74)">
     <rect width="74" height="74" rx="25" fill="#D7EFDC" filter="url(#shadow)"/>
     <text x="37" y="50" text-anchor="middle" font-size="38">🌱</text>
-    <text x="98" y="35" fill="#28483A" font-size="30" font-weight="800" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif">先吃</text>
-    <text x="99" y="60" fill="#718B7E" font-size="13" letter-spacing="5" font-family="Arial,sans-serif">XIANCHI</text>
+    <text x="98" y="35" fill="#28483A" font-size="30" font-weight="800" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif">What to Eat</text>
+    <text x="99" y="60" fill="#718B7E" font-size="13" letter-spacing="3" font-family="Arial,sans-serif">FRESH FOOD STEWARD</text>
   </g>
   <text x="102" y="235" fill="#29483A" font-size="56" font-weight="850" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif">把冰箱里的食材</text>
   <text x="102" y="305" fill="#29483A" font-size="56" font-weight="850" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif">变成今晚的好味道</text>
