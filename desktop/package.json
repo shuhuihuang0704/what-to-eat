@@ -4,7 +4,7 @@
   "private": true,
   "description": "Windows desktop client for What to Eat",
   "main": "main.cjs",
-  "scripts": { "start": "electron .", "dist": "electron-builder --win --x64" },
+  "scripts": { "start": "electron .", "dist": "electron-builder --win --x64", "dist:mac": "electron-builder --mac --x64 --arm64" },
   "devDependencies": { "electron": "^37.2.6", "electron-builder": "^26.0.12" },
   "build": {
     "appId": "com.shuhuihuang.whattoeat",
@@ -12,6 +12,7 @@
     "directories": { "output": "release" },
     "files": ["main.cjs", "package.json"],
     "win": { "target": ["nsis", "portable"] },
+    "mac": { "target": ["dmg", "zip"], "category": "public.app-category.lifestyle", "artifactName": "What-to-Eat-${version}-${arch}.${ext}" },
     "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true, "artifactName": "What-to-Eat-Setup-${version}-${arch}.${ext}" },
     "portable": { "artifactName": "What-to-Eat-Portable-${version}-${arch}.${ext}" }
   }
