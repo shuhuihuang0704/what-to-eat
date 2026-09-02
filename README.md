@@ -140,3 +140,9 @@ what-to-eat/
 如果你喜欢这个项目，欢迎点一个 ⭐
 
 </div>
+
+## Windows 下载
+
+[**下载 Windows 安装版或免安装版 →**](https://github.com/shuhuihuang0704/what-to-eat/releases/latest)
+
+支持 Windows 10/11 x64，桌面版需要联网。详细说明见 [WINDOWS.md](./WINDOWS.md)。
