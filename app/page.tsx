@@ -1,3 +1,5 @@
+import PwaInstaller from "./pwa-installer";
+
 export default function Home() {
   return (
     <main className="site-shell">
@@ -8,6 +10,7 @@ export default function Home() {
         allow="camera"
         referrerPolicy="no-referrer"
       />
+      <PwaInstaller />
     </main>
   );
 }
