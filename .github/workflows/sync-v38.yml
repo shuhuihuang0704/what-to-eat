@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "source-v38.tar.gz.part-*"
+      - "source-v38.ready"
 
 permissions:
   contents: write
@@ -23,14 +23,16 @@ jobs:
       - name: Replace repository with the v38 source
         shell: bash
         run: |
-          cat source-v38.tar.gz.part-* > /tmp/source-v38.tar.gz
+          cat source-v38.tar.gz.chunk-* > /tmp/source-v38.tar.gz
           find . -mindepth 1 -maxdepth 1 \
             ! -name .git \
             ! -name .github \
-            ! -name 'source-v38.tar.gz.part-*' \
+            ! -name 'source-v38.tar.gz.chunk-*' \
+            ! -name source-v38.ready \
             -exec rm -rf {} +
           tar -xzf /tmp/source-v38.tar.gz
-          rm -f source-v38.tar.gz.part-*
+          rm -f source-v38.tar.gz.chunk-*
+          rm -f source-v38.ready
           rm -f .github/workflows/sync-v38.yml
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
