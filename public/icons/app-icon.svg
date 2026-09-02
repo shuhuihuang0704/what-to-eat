@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="What to Eat">
+  <rect width="512" height="512" rx="112" fill="#eff6ee"/>
+  <circle cx="256" cy="256" r="166" fill="#fff" stroke="#326b4a" stroke-width="18"/>
+  <path d="M139 255c8 82 52 132 117 132s109-50 117-132H139Z" fill="#f4b85d" stroke="#294d3b" stroke-width="16" stroke-linejoin="round"/>
+  <path d="M176 255c13-53 45-86 96-97 26-6 48-4 65 4-4 30-23 53-56 68-27 13-62 21-105 25Z" fill="#77b477"/>
+  <path d="M228 242c7-56 36-93 87-113" fill="none" stroke="#294d3b" stroke-width="14" stroke-linecap="round"/>
+  <path d="M337 131c-2 44-22 73-61 88 0-42 20-71 61-88Z" fill="#4f9761" stroke="#294d3b" stroke-width="11" stroke-linejoin="round"/>
+  <path d="M170 415h172" fill="none" stroke="#294d3b" stroke-width="18" stroke-linecap="round"/>
+</svg>
