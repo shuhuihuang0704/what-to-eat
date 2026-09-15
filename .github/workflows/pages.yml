@@ -1,0 +1,62 @@
+name: Deploy GitHub Pages demo
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare static demo
+        run: |
+          rm -rf _site
+          mkdir -p _site
+          cp public/app-fragment.html _site/index.html
+          cp -R public/. _site/
+          rm -f _site/app-fragment.html
+          touch _site/.nojekyll
+          # GitHub project pages live under /what-to-eat rather than /.
+          # Rewrite bundled asset paths while leaving API calls untouched.
+          sed -i \
+            -e 's#"/cooking-steps/#"/what-to-eat/cooking-steps/#g' \
+            -e "s#'/cooking-steps/#'/what-to-eat/cooking-steps/#g" \
+            -e 's#"/recipe-detail/#"/what-to-eat/recipe-detail/#g' \
+            -e "s#'/recipe-detail/#'/what-to-eat/recipe-detail/#g" \
+            -e 's#"/dessert-photos/#"/what-to-eat/dessert-photos/#g' \
+            -e "s#'/dessert-photos/#'/what-to-eat/dessert-photos/#g" \
+            -e 's#"/recipe-search-utils.js#"/what-to-eat/recipe-search-utils.js#g' \
+            -e "s#'/recipe-search-utils.js#'/what-to-eat/recipe-search-utils.js#g" \
+            -e 's#"/recipe-step-photo-overrides.js#"/what-to-eat/recipe-step-photo-overrides.js#g' \
+            -e "s#'/recipe-step-photo-overrides.js#'/what-to-eat/recipe-step-photo-overrides.js#g" \
+            -e 's#"/verified-recipe-methods.js#"/what-to-eat/verified-recipe-methods.js#g' \
+            -e "s#'/verified-recipe-methods.js#'/what-to-eat/verified-recipe-methods.js#g" \
+            _site/index.html
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
